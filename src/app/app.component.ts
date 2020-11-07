@@ -131,7 +131,7 @@ export class AppComponent implements OnInit {
         this.audio.g.pause();
         this.audio.g.currentTime = 0;
         break;
-      case 'G':
+      case 'Gs':
         this.audio.gs.pause();
         this.audio.gs.currentTime = 0;
         break;
