@@ -4,11 +4,44 @@
   display: flex;
   flex-direction: row;
   padding: 0 0 5px;
+  position: relative;
   .note {
     &.white {
       border: 1px solid #000;
       flex-grow: 1;
       border-radius: 0 0 10px 10px;
+      &:active {
+        background-color: rgba(0, 0, 0, 0.1 );
+      }
+    }
+  }
+  #black-container {
+    width: 100%;
+    height: 58%;
+    position: absolute;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(14, auto);
+    .note.black {
+      background-color: #000;
+      width: 80%;
+      height: 100%;
+      transform: translateX(-50%);
+      &.c {
+        grid-column: 3;
+      }
+      &.d {
+        grid-column: 5;
+      }
+      &.f {
+        grid-column: 9;
+      }
+      &.g {
+        grid-column: 11;
+      }
+      &.a {
+        grid-column: 13;
+      }
     }
   }
 }
